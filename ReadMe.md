@@ -216,7 +216,7 @@ Input needs to be read from a text file, and output should be printed to console
 
 You can refer our help documents [here](https://help.geektrust.in)
 
-You can read build instructions [here](https://github.com/geektrust/coding-problem-artefacts)
+You can read build instructions [here](https://github.com/geektrust/coding-problem-artefacts/tree/master/Java)
 
 # How to run the code
 
