@@ -1,24 +1,30 @@
 # Problem Statement
-# Problem Statement
-This code is meant to solve the problem stated here -> https://codu.ai/coding-problem/mymoney
+This code is meant to solve the problem stated here -> https://codu.ai/coding-problem/mymoney.
+
 Your objective is to improve the code, make sure all output cases are covered, and unit tests pass. 
+
+# Pre-requisites
+* Java 1.8/1.11/1.15
+* Maven
+
 # How to run the code
 
-Use the pom.xml provided along with this project. Please change the main class entry (<mainClass>com.example.geektrust.Main</mainClass>) in the pom.xml if your main class has changed. 
+We have provided scripts to execute the code. 
 
-Run `mvn clean install`. This will create a jar file `geektrust.jar` in the `target` folder.
+Use `run.sh` if you are Linux/Unix/macOS Operating systems and `run.bat` if you are on Windows.
 
-Then run 
+Internally both the scripts run the following commands 
 
-```java -jar target/geektrust.jar <path_to_input_file>```
+ * `mvn clean install -DskipTests assembly:single -q` - This will create a jar file `geektrust.jar` in the `target` folder.
+ * `java -jar target/geektrust.jar sample_input/input1.txt` - This will execute the jar file passing in the sample input file as the command line argument
 
-For e.g `java -jar target/geektrust.jar input1.txt`
+ Use the pom.xml provided along with this project. Please change the main class entry (<mainClass>com.example.geektrust.Main</mainClass>) in the pom.xml if your main class has changed.
 
-Some sample input files are there in the folder `sample_input`
+ # How to execute the unit tests
+
+ `mvn clean test` will execute the unit test cases.
+
+# Help
 
 You can refer our help documents [here](https://help.geektrust.in)
 You can read build instructions [here](https://github.com/geektrust/coding-problem-artefacts/tree/master/Java)
-
-# Java Version
-
-Java version used in this project is 1.8. But you can free to use 1.11 and 1.15.
