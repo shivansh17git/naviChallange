@@ -32,15 +32,15 @@ public class PortFolio {
     }
 
     public PortFolio(PortFolio portFolio) {
-        this.equity = portFolio.equity;
-        this.debt = portFolio.debt;
-        this.gold = portFolio.gold;
+        this.equity = Math.floor(portFolio.equity);
+        this.debt = Math.floor(portFolio.debt);
+        this.gold = Math.floor(portFolio.gold);
     }
 
     public PortFolio(Double newEquity, Double newDebt, Double newGold) {
-        equity = newEquity;
-        debt = newDebt;
-        gold = newGold;
+        equity = Math.floor(newEquity);
+        debt = Math.floor(newDebt);
+        gold = Math.floor(newGold);
     }
 
 
@@ -57,9 +57,9 @@ public class PortFolio {
     }
 
     public void update(Double newEquity, Double newDebt, Double newGold) {
-        equity = newEquity;
-        debt = newDebt;
-        gold = newGold;
+        equity = Math.floor(newEquity);
+        debt = Math.floor(newDebt);
+        gold = Math.floor(newGold);
     }
 
     @Override
@@ -73,9 +73,9 @@ public class PortFolio {
             Double debtRatio = getDebtRatio();
             Double goldRatio = getGoldRatio();
             Double total = getTotal();
-            equity = total * equityRatio;
-            debt = total * debtRatio;
-            gold = total * goldRatio;
+            equity = Math.floor(total * equityRatio);
+            debt = Math.floor(total * debtRatio);
+            gold = Math.floor(total * goldRatio);
             lastReBalancePortFolio = Optional.of(new PortFolio(this));
             portFolioHistory.put(month, lastReBalancePortFolio.get());
         }
